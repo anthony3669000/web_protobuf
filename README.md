@@ -1,1 +1,1 @@
-# web_protobuf
+# spring boot 项目集成protobuf包函proto文件编译，以前web请求protobuf序列化、返序列化，降低业务代码耦合，使其业务代码不需关于是否使用protobuf
