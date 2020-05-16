@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "com.melo.model";
+option java_outer_classname = "Result";
+
+message Response{
+    int32 code = 1;
+    string message = 2;
+    int64 timestamp = 3;
+    int64 cost = 4;
+    string serverIP = 5;
+    string requestId = 6;
+    bytes data = 7;
+
+}
