@@ -17,9 +17,9 @@ public class HttpMessageConverterConfig {
      */
     private ProtobufHttpMessageConverter protobufHttpMessageConverter(){
         ProtobufHttpMessageConverter protobufHttpMessageConverter = new ProtobufHttpMessageConverter();
-        List<MediaType> supportedMediaTypes = new ArrayList<>();
-        supportedMediaTypes.add(ProtobufHttpMessageConverter.PROTOBUF);
-        protobufHttpMessageConverter.setSupportedMediaTypes(supportedMediaTypes);
+        //List<MediaType> supportedMediaTypes = new ArrayList<>();
+        //supportedMediaTypes.add(ProtobufHttpMessageConverter.PROTOBUF);
+        //protobufHttpMessageConverter.setSupportedMediaTypes(supportedMediaTypes);
         return protobufHttpMessageConverter;
     }
 

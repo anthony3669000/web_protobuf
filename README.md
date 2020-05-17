@@ -232,3 +232,22 @@ SpringMVC 4.3版本已经集成了Protobuf的Converter，org.springframework.htt
     
     调用后输出日志
     code: 200 message: successful data: 1589681523617
+## 7 老版本Spring怎么解决 不支持注解加上这个
+
+    <beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:context="http://www.springframework.org/schema/context"
+           xmlns:mvc="http://www.springframework.org/schema/mvc"
+           xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.1.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+        <mvc:annotation-driven>
+            <mvc:message-converters>
+                <bean name="protobufHttpMessageConverter" class="org.springframework.http.converter.protobuf.ProtobufHttpMessageConverter"/>
+            </mvc:message-converters>
+        </mvc:annotation-driven>
+    
+    </beans>
