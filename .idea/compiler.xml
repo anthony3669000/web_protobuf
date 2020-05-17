@@ -7,8 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
+        <module name="web" />
         <module name="test" />
         <module name="model" />
+      </profile>
+      <profile name="Annotation profile for web" enabled="true">
+        <sourceOutputDir name="web/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="web/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="web_protobuf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

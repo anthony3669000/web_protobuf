@@ -12,7 +12,7 @@ import javax.security.auth.login.AccountNotFoundException;
 public class LoginController {
     private static final Logger logger =  LoggerFactory.getLogger(LoginController.class);
 
-    @PostMapping(produces = "application/x-protobuf")
+    @PostMapping
     public Login.LoginResponse login(Login.LoginRequest request) throws Exception {
         logger.info("username {} login password {}",new Object[]{request.getUsername(),request.getPassword()});
         if(!"admin".equals(request.getUsername())||!"admin".equals(request.getPassword())){

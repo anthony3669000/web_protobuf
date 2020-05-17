@@ -18,20 +18,13 @@ import java.net.URI;
  * Unit test for simple App.
  */
 
-
-@RunWith(SpringRunner.class)
-@SpringBootTest
 public class AppTest 
 {
     /**
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
-    public static void test() {
+    public static void login() {
         try {
             URI uri = new URI("http", null, "127.0.0.1", 8080, "/login", "", null);
             HttpPost request = new HttpPost(uri);
@@ -47,6 +40,6 @@ public class AppTest
     }
 
     public static void main(String[] args) {
-        test();
+        login();
     }
 }

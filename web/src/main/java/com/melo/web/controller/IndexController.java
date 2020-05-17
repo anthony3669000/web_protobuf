@@ -1,9 +1,9 @@
 package com.melo.web.controller;
 
-import com.melo.common.annotation.ProtoBufRestController;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@ProtoBufRestController
+@RestController
 public class IndexController {
     @GetMapping("/index")
     public String index(){
