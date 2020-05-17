@@ -215,7 +215,10 @@ SpringMVC 4.3版本已经集成了Protobuf的Converter，org.springframework.htt
                 URI uri = new URI("http", null, "127.0.0.1", 8080, "/login", "", null);
                 HttpPost request = new HttpPost(uri);
     
-                Login.LoginRequest loginRequest = Login.LoginRequest.newBuilder().setUsername("admin").setPassword("admin").build();
+                Login.LoginRequest loginRequest = Login.LoginRequest.newBuilder()
+                                                .setUsername("admin")
+                                                .setPassword("admin")
+                                                .build();
                 HttpResponse response = HttpUtils.doPost(request, loginRequest);
                 Result.Response result = Result.Response.parseFrom(response.getEntity().getContent());
                 Login.LoginResponse loginResponse = Login.LoginResponse.parseFrom(result.getData());
